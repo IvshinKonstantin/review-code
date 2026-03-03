@@ -1,4 +1,5 @@
 //FIX_ME: Использование using namespace std; (против правил Google Style Guide)
+
 //старый код
 using namespace std;
 
@@ -6,6 +7,7 @@ using namespace std;
 // (using namespace std; удалено, используется префикс std::)
 
 //FIX_ME: Неправильное именование функции (должно быть lower_case_with_underscores)
+
 //старый код
 void knapSack(int W, vector<int>& wt, vector<int>& val) {
 
@@ -15,6 +17,7 @@ void FindMinTaxSubset(int min_weight,
                      const std::vector<int>& taxes) {
 
 //FIX_ME: Неправильное именование переменных (должны быть lower_case_with_underscores)
+
 //старый код
 int W, vector<int>& wt, vector<int>& val
 int n = wt.size();
@@ -26,6 +29,7 @@ int num_items = weights.size();
 int total_weight = 0;
 
 //FIX_ME: Отсутствие проверки на невозможность достижения минимального веса
+
 //старый код
 // (проверка отсутствует)
 
@@ -36,6 +40,7 @@ if (total_weight < min_weight) {
 }
 
 //FIX_ME: Неправильное форматирование скобок (открывающая скобка должна быть на той же строке)
+
 //старый код
 for (int i = 0; i < n; i++) 
 { 
@@ -47,6 +52,7 @@ for (int i = 0; i < num_items; ++i) {
   for (int w = total_weight; w >= weights[i]; --w) {
 
 //FIX_ME: Неправильные отступы (нужно 2 пробела, не табуляция)
+
 //старый код
     int n = wt.size(); // 4 пробела
     int maxWeight = 0; // 4 пробела
@@ -56,6 +62,7 @@ for (int i = 0; i < num_items; ++i) {
   int total_weight = 0; // 2 пробела
 
 //FIX_ME: Неэффективное чтение данных (использование push_back)
+
 //старый код
 vector<int> weights;
 vector<int> taxes;
@@ -73,6 +80,7 @@ for (int i = 0; i < num_items; ++i) {
 }
 
 //FIX_ME: Отсутствие проверки открытия файла
+
 //старый код
 ifstream input("t.txt");
 
@@ -84,6 +92,7 @@ if (!input_file.is_open()) {
 }
 
 //FIX_ME: Отсутствие проверки корректности чтения данных
+
 //старый код
 input >> N >> Z;
 
@@ -94,6 +103,7 @@ if (!(input_file >> num_items >> min_required_weight)) {
 }
 
 //FIX_ME: Использование cout для ошибок (нужно cerr)
+
 //старый код
 cout << "Ошибка открытия файла!" << endl;
 
@@ -101,6 +111,7 @@ cout << "Ошибка открытия файла!" << endl;
 std::cerr << "Ошибка открытия файла t.txt!" << std::endl;
 
 //FIX_ME: Отсутствие кода возврата при ошибках
+
 //старый код
 int main() {
     // ...
@@ -116,6 +127,7 @@ int main() {
 }
 
 //FIX_ME: Длина строки превышает 80 символов
+
 //старый код
 vector<vector<bool>> selected(maxWeight + 1, vector<bool>(n, false));
 
@@ -124,6 +136,7 @@ std::vector<std::vector<bool>> selected(total_weight + 1,
                                         std::vector<bool>(num_items, false));
 
 //FIX_ME: Постфиксный инкремент вместо префиксного
+
 //старый код
 for (int i = 0; i < n; i++)
 for (int w = maxWeight; w >= wt[i]; w--)
